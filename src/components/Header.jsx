@@ -28,7 +28,7 @@ export const Header = ({
 
 	return (
 		<header>
-			<h1>Tienda</h1>
+			<h1>Tienda De Mousepads</h1>
 
 			<div className='container-icon'>
 				<div
