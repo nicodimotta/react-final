@@ -5,6 +5,8 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
 	server: {
 		port: 3000,
+		open: true,  // Esta línea indica a Vite que abra automáticamente el navegador
 	},
 	plugins: [react()],
 });
+
