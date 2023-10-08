@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Header } from './components/Header';
 import { ProductList } from './components/ProductList';
+import ProductDetail from './components/ProductDetail'; // Asegúrate de crear este componente
 import Navbar from './components/Navbar.jsx';
 import Contacto from './components/Contacto';
 
@@ -33,6 +34,7 @@ function App() {
             <Navbar {...propsHeader} />
             <Routes>
                 <Route path="/" element={<><Header {...propsHeader} /><ProductList {...propsProductList} /></>} />
+                <Route path="/product/:productId" element={<ProductDetail {...propsProductList} />} />
                 <Route path="/contacto" element={<Contacto />} />
             </Routes>
         </Router>
@@ -40,6 +42,8 @@ function App() {
 }
 
 export default App;
+
+
 
 
 

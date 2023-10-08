@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';  // Importamos Link
 import { data } from '../data';
 
 export const ProductList = ({
@@ -30,11 +31,12 @@ export const ProductList = ({
 			{data.map(product => (
 				<div className='item' key={product.id}>
 					<figure>
-						<img src={product.imageUrl} alt={product.nameProduct} /> {/* Aquí está el cambio */}
+						<img src={product.imageUrl} alt={product.nameProduct} />
 					</figure>
 					<div className='info-product'>
 						<h2>{product.nameProduct}</h2>
 						<p className='price'>${product.price}</p>
+						<Link to={`/product/${product.id}`} className="btn btn-info">Más detalles</Link>  {/* Aquí agregamos el enlace a la página de detalles */}
 						<button onClick={() => onAddProduct(product)}>
 							Añadir al carrito
 						</button>
@@ -44,4 +46,5 @@ export const ProductList = ({
 		</div>
 	);
 };
+
 
