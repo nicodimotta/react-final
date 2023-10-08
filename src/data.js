@@ -18,7 +18,7 @@ export const data = [
     {
         id: 3,
         imageUrl: '/images/mp511def.jpg',
-        nameProduct: 'Cooler Master MP511',
+        nameProduct: 'Cooler Master MP511', 
         price: 25,
         quantity: 1,
         description: 'La alfombrilla para ratón MP511 es una mejora en todos los sentidos de la palabra, con el legendario tejido CORDURA® para una mayor durabilidad, una resistencia impecable a las salpicaduras y un rendimiento fluido para las generaciones de batallas venideras.'
