@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
+import { Link } from 'react-router-dom';
 import { CartContext } from "../CartContext";
-
 
 const CartWidget = () => {
   const {
@@ -29,10 +29,7 @@ const CartWidget = () => {
 
   return (
     <div className='container-icon'>
-      <div
-        className='container-cart-icon'
-        onClick={() => setActive(!active)}
-      >
+      <div className='container-cart-icon' onClick={() => setActive(!active)}>
         <svg
           xmlns='http://www.w3.org/2000/svg'
           fill='none'
@@ -89,6 +86,7 @@ const CartWidget = () => {
             <button className='btn-clear-all' onClick={onCleanCart}>
               Vaciar Carrito
             </button>
+            <Link to="/checkout" className="btn-clear-all">Proceder al checkout</Link>
           </>
         ) : (
           <p className='cart-empty'>El carrito está vacío</p>
@@ -99,6 +97,8 @@ const CartWidget = () => {
 }
 
 export default CartWidget;
+
+
 
 
 
