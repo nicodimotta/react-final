@@ -1,7 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { CartContext } from "../CartContext";
 
-const CartWidget = ({ allProducts, setAllProducts, total, countProducts, setCountProducts, setTotal }) => {
-  
+
+const CartWidget = () => {
+  const {
+    allProducts,
+    setAllProducts,
+    total,
+    setTotal,
+    countProducts,
+    setCountProducts
+  } = useContext(CartContext);
+
   const [active, setActive] = useState(false);
 
   const onDeleteProduct = product => {

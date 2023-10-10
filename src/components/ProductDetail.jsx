@@ -1,17 +1,20 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { data } from '../data';
+import { CartContext } from '../CartContext';
 
-const ProductDetail = ({
-    allProducts,
-    setAllProducts,
-    countProducts,
-    setCountProducts,
-    total,
-    setTotal
-}) => {
+const ProductDetail = () => {
     const { productId } = useParams();
     const product = data.find(prod => prod.id === parseInt(productId));
+
+    const {
+        allProducts,
+        setAllProducts,
+        countProducts,
+        setCountProducts,
+        total,
+        setTotal
+    } = useContext(CartContext);
 
     const onAddProduct = product => {
         if (allProducts.find(item => item.id === product.id)) {
@@ -50,6 +53,7 @@ const ProductDetail = ({
 }
 
 export default ProductDetail;
+
 
 
 
