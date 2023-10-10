@@ -1,6 +1,6 @@
-// Checkout.jsx
 import React, { useState, useContext } from 'react';
 import { CartContext } from '../CartContext';
+import Brief from './Brief';
 
 const Checkout = () => {
   const { allProducts, setAllProducts, setTotal, setCountProducts } = useContext(CartContext);
@@ -28,8 +28,11 @@ const Checkout = () => {
   return (
     <div className="contact-container">
       <h2>Finalizar compra</h2>
-      <form className="contact-form" onSubmit={handleSubmit}>
 
+      {/* Aquí añadimos el Brief */}
+      <Brief />
+
+      <form className="contact-form" onSubmit={handleSubmit}>
         <div>
           <label>Nombre completo:</label>
           <input type="text" name="name" value={formData.name} onChange={handleChange} required />
@@ -49,3 +52,4 @@ const Checkout = () => {
 }
 
 export default Checkout;
+

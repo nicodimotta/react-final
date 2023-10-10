@@ -374,6 +374,23 @@ button:hover {
     background-color: #555;
 }
 
+.brief-container {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 10px;
+    width: 300px; /* O lo que necesites */
+  }
+  
+  .brief-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .brief-list li {
+    margin-bottom: 10px;
+  }
+  
+
 
 
 
