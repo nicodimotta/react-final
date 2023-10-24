@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom';
 import { data } from '../data';
 import { CartContext } from '../CartContext';
 
+import { getFirestore, doc, getDoc  } from 'firebase/firestore'
+
 const ProductDetail = () => {
     const { productId } = useParams();
     const product = data.find(prod => prod.id === parseInt(productId));
