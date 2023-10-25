@@ -20,7 +20,7 @@ const ProductDetail = () => {
         "1": "7HzScd8unmIUl779OltE",
         "2": "xC5njkInbo3dQT4c0nOE",
         "3": "hjYbMK37aeEZ8PpxaC8d",
-        "4": "hjYbMK37aeEZ8PpxaC8d",
+        "4": "KL1fFzvpgn520opDR4M6",
         "5": "mFaEV4pwM5bBEwTgy9LW",
         "6": "5FdQtd8Csjj6d98n8Vlo"
     };
