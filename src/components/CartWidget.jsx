@@ -54,13 +54,13 @@ const CartWidget = () => {
           <>
             {allProducts.map(product => (
               <div className='cart-product' key={product.id}>
-                <img src={product.imageUrl} alt={product.nameProduct} className="product-image-in-cart" style={{width: '50px', marginRight: '10px'}} />
+                <img src={product.image} alt={product.nameProduct} className="product-image-in-cart" style={{width: '50px', marginRight: '10px'}} />
                 <div className='info-cart-product'>
                   <span className='cantidad-producto-carrito'>
                     {product.quantity}
                   </span>
                   <p className='titulo-producto-carrito'>
-                    {product.nameProduct}
+                    {product.title}
                   </p>
                   <span className='precio-producto-carrito'>
                     ${product.price}
